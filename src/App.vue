@@ -8,8 +8,6 @@
 import { Table } from './components/';
 import axios from 'axios';
 
-axios.defaults.baseURL = window.location.origin;
-
 export default {
 	name: 'App',
 	components: {
@@ -22,11 +20,7 @@ export default {
 	mounted() {
 		this.isLoading = true;
 		axios
-			.get('https://cors-anywhere.herokuapp.com/https://rssi.wmrk.tk/', {
-				headers: {
-					accept: 'application/json',
-				},
-			})
+			.get('https://cors-anywhere.herokuapp.com/https://rssi.wmrk.tk/')
 			.then(({ data }) => {
 				this.listUsers = Object.keys(data).map(id => ({ id, ...data[id] }));
 				this.isLoading = false;

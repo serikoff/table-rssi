@@ -49,7 +49,7 @@
 					<template
 						v-for="(fragment, i) in text
 							.toString()
-							.split(new RegExp(`(?<=${searchText})|(?=${searchText})`, 'i'))"
+							.split(new RegExp(`(((?!${searchText})|)${searchText})`, 'i'))"
 					>
 						<mark
 							v-if="fragment.toLowerCase() === searchText.toLowerCase()"
@@ -62,7 +62,6 @@
 				</span>
 				<template v-else>{{ text }}</template>
 			</template>
-
 			<div slot="expandedRowRender" slot-scope="record" style="margin: 0">
 				<RssiChart :record="record" />
 			</div>
@@ -71,7 +70,7 @@
 </template>
 
 <script>
-import RssiChart from './RssiChart';
+import { RssiChart } from './';
 
 export default {
 	name: 'Table',
