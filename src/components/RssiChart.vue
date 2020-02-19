@@ -8,9 +8,6 @@ import DataSet from '@antv/data-set';
 
 export default {
 	name: 'RssiChart',
-	data() {
-		return {};
-	},
 	props: {
 		record: {
 			type: Object,
@@ -19,9 +16,10 @@ export default {
 	},
 	mounted() {
 		const {
+			renderChart,
 			record: { id, signals },
 		} = this;
-		this.renderChart({ id, signals });
+		renderChart({ id, signals });
 	},
 	methods: {
 		renderChart({ id, signals }) {

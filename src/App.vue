@@ -30,7 +30,6 @@ export default {
 			.then(({ data }) => {
 				this.listUsers = Object.keys(data).map(id => ({ id, ...data[id] }));
 				this.isLoading = false;
-				console.log(this.listUsers);
 			})
 			.catch(err => {
 				this.isLoading = false;
