@@ -105,7 +105,6 @@ export default {
 .table-operations {
 	margin-bottom: 16px;
 }
-
 .table-operations > button {
 	margin-right: 8px;
 }

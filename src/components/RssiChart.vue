@@ -1,5 +1,5 @@
 <template>
-	<div :id="`id_${record.id}`" />
+	<div :id="`chart-container_${record.id}`" />
 </template>
 
 <script>
@@ -33,7 +33,7 @@ export default {
 				value: 'value',
 			});
 			const chart = new G2.Chart({
-				container: `id_${id}`,
+				container: `chart-container_${id}`,
 				forceFit: true,
 				height: 400,
 			});
