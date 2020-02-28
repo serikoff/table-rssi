@@ -130,15 +130,6 @@ export default {
 		handleChange(pagination, filters, sorter) {
 			this.sortedInfo = sorter;
 		},
-		clearAll() {
-			this.sortedInfo = null;
-		},
-		setAgeSort() {
-			this.sortedInfo = {
-				order: 'descend',
-				columnKey: 'age',
-			};
-		},
 		handleSearch(selectedKeys, confirm) {
 			confirm();
 			this.searchText = selectedKeys[0];
