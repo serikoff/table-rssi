@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import { RssiChart } from './';
+import RssiChart from './RssiChart';
 
 export default {
 	name: 'Table',
